@@ -1,5 +1,4 @@
 <?php
-session_start(); // Inicia la sesión
 
 // Verifica si la sesión 'tipo_trabajador_id' está definida
 if (isset($_SESSION['tipo_trabajador_id'])) {
@@ -16,7 +15,6 @@ if (isset($_SESSION['tipo_trabajador_id'])) {
         echo "Tipo de trabajador no identificado."; // Si el tipo de trabajador no se encuentra
     }
 } else {
-    // Si no se ha iniciado sesión, muestra un mensaje
-    echo "No se ha establecido el tipo de usuario";
+    echo "Tipo de trabajador no identificado.";
 }
 ?>

@@ -19,28 +19,35 @@
 <!-- REQUIRED SCRIPTS -->
 <!-- jQuery -->
 <script src="<?php echo $rutaBase; ?>plugins/jquery/jquery.min.js"></script>
+
+<!-- SweetAlert2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.2/dist/sweetalert2.all.min.js"></script>
+
 <!-- Bootstrap -->
 <script src="<?php echo $rutaBase; ?>plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 <!-- overlayScrollbars -->
 <script src="<?php echo $rutaBase; ?>plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+
 <!-- AdminLTE App -->
 <script src="<?php echo $rutaBase; ?>dist/js/adminlte.js"></script>
 
 <!-- PAGE PLUGINS -->
-<!-- jQuery Mapael -->
 <script src="<?php echo $rutaBase; ?>plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
 <script src="<?php echo $rutaBase; ?>plugins/raphael/raphael.min.js"></script>
 <script src="<?php echo $rutaBase; ?>plugins/jquery-mapael/jquery.mapael.min.js"></script>
 <script src="<?php echo $rutaBase; ?>plugins/jquery-mapael/maps/usa_states.min.js"></script>
+
 <!-- ChartJS -->
 <script src="<?php echo $rutaBase; ?>plugins/chart.js/Chart.min.js"></script>
 
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo $rutaBase; ?>dist/js/demo.js"></script>
+
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?php echo $rutaBase; ?>dist/js/pages/dashboard2.js"></script>
 
-<!-- Script to fix footer position -->
+<!-- Script para ajustes personalizados -->
 <script>
   $(document).ready(function() {
     function adjustFooter() {
@@ -61,3 +68,12 @@
 </script>
 </body>
 </html>
+<!-- Ejemplos de SweetAlert2 
+// Ejemplo de SweetAlert2
+    Swal.fire({
+      title: 'Hello!',
+      text: 'This is a SweetAlert2 test.',
+      icon: 'success',
+      confirmButtonText: 'Ok'
+    });
+-->
