@@ -40,10 +40,10 @@ if (!isset($_SESSION['logueado']) || $_SESSION['logueado'] !== true) {
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="index.php" class="nav-link">Inicio</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="#" class="nav-link">Contacto</a>
       </li>
     </ul>
 
@@ -173,9 +173,9 @@ if (!isset($_SESSION['logueado']) || $_SESSION['logueado'] !== true) {
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="index.php" class="brand-link">
       <img src="<?php echo $rutaBase; ?>dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <span class="brand-text font-weight-light">LunovaSolutionsLu</span>
     </a>
 
     <!-- Sidebar -->
@@ -186,6 +186,6 @@ if (!isset($_SESSION['logueado']) || $_SESSION['logueado'] !== true) {
           <img src="<?php echo $rutaBase; ?>dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+        <a id="perfilLink" href="<?php echo $rutaBase; ?>perfil.php?txtID=<?php echo $_SESSION['id']; ?>" class="d-block"><?php echo $_SESSION['nombre'] . " " . $_SESSION['apellido_pat'] . " " . $_SESSION['apellido_mat']; ?></a>
         </div>
       </div>

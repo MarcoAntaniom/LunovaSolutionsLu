@@ -28,7 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['logueado'] = true;
         $_SESSION['password'] = $registro["clave"];
         $_SESSION['tipo_trabajador_id'] = $registro["tipo_trabajador"];
-        $_SESSION['tipo_trabajador'] = $registro["tipo_usuario_descripcion"];
         $_SESSION['rut'] = $registro['rut'];
         $_SESSION['dv'] = $registro['dv'];
         $_SESSION['nombre'] = $registro['nombre'];
