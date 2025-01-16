@@ -1,3 +1,4 @@
+<?php $rutaBase = "http://localhost/LunovaSolutionsLu/"; ?>
 
 <!-- Control Sidebar -->
 <aside class="control-sidebar control-sidebar-dark">
@@ -66,6 +67,7 @@
     $(window).resize(adjustFooter);
   });
 </script>
+
 </body>
 </html>
 <!-- Ejemplos de SweetAlert2 

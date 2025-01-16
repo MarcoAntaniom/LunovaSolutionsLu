@@ -2,7 +2,7 @@
 session_start();
 require_once("conexion.php");
 
-if ($_POST) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usuario = $_POST["usuario"];
     $contrasenia = $_POST["contrasenia"];
     
@@ -23,23 +23,22 @@ if ($_POST) {
     // Verificar si el usuario existe
     if ($registro) {
         // Crear variables de sesión
+        $_SESSION['usuario_id'] = $registro["id"];
         $_SESSION['usuario'] = $registro["rut"];
         $_SESSION['logueado'] = true;
         $_SESSION['password'] = $registro["clave"];
-        $_SESSION['Tipo_usuario'] = $registro["tipo_usuario_descripcion"];
-        $_SESSION['tipo_trabajador_id'] = $registro["tipo_trabajador"]; 
+        $_SESSION['tipo_trabajador_id'] = $registro["tipo_trabajador"];
+        $_SESSION['tipo_trabajador'] = $registro["tipo_usuario_descripcion"];
         $_SESSION['rut'] = $registro['rut'];
         $_SESSION['dv'] = $registro['dv'];
         $_SESSION['nombre'] = $registro['nombre'];
         $_SESSION['apellido_pat'] = $registro['apellido_pat'];
         $_SESSION['apellido_mat'] = $registro['apellido_mat'];
-        $_SESSION['id'] = $registro['id'];
-
 
         $bienvenida = "Haz ingresado como <b>" . $registro["nombre"] . " " . $registro["apellido_pat"] . " " . $registro["apellido_mat"] . "</b><br> Tu Rut registrado es <br>" . $registro["rut"] . "- " . $registro["dv"];
 
         // Redirigir según el tipo de usuario
-        switch ($_SESSION['Tipo_usuario']) {
+        switch ($_SESSION['tipo_trabajador']) {
             case "Administrator":
                 header("Location: administrador/index.php?bienvenida=" . urlencode($bienvenida));
                 break;
@@ -65,7 +64,6 @@ if ($_POST) {
     }
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="es">
